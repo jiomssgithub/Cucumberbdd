@@ -1,4 +1,5 @@
 package StepDefinition;
+import StepDefinition.BaseClass;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +19,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class stepdefinition1 extends BaseClass
+public class StepDefinition extends BaseClass
 {
 	
 		// TODO Auto-generated constructor stub
