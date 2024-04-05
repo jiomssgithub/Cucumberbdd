@@ -12,9 +12,9 @@ public class Loginpg {
 		 public WebDriver driver;
 			
 			@FindBy(id="username")
-			WebElement username;
+			private WebElement username;
 			@FindBy(xpath="//input[@id='password']")
-			WebElement password;
+			private WebElement password;
 			@FindBy(xpath="//button[@id='submit']")
 			WebElement Submit;
 			@FindBy(xpath="//h1[normalize-space()='Logged In Successfully']")

@@ -1,9 +1,13 @@
 
 Feature: Login functionality
-@sanity
-Scenario: Successful login using valid credentials
+
+Background:
  Given Browser launch
  Given User open the URL "https://practicetestautomation.com/practice-test-login/"
+@sanity
+Scenario: Successful login using valid credentials
+
+ 
  When User enters Userid as "student" password as "Password123"
  And click on Submit
  Then success message should be "Logged In Successfully"
@@ -13,8 +17,8 @@ Scenario: Successful login using valid credentials
 
 @regression
 Scenario Outline: Successful login using valid credentials
- Given Browser launch
- Given User open the URL "https://practicetestautomation.com/practice-test-login/"
+ 
+ 
  When User enters Userid as "<user>" password as "<password>"
  And click on Submit
  Then success message should be "Logged In Successfully"
