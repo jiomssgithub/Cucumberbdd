@@ -77,11 +77,7 @@ public class StepDefinition extends BaseClass
 	   
 	}
 
-	@Then("close the browser")
-	public void close_the_browser() {
-		//Browser.close();
-	    
-	}
+
 	
 	@After("@regression")
 	   public void Screenshotforfailed(Scenario scenerio) throws IOException

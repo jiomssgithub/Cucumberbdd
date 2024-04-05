@@ -13,7 +13,7 @@ Scenario: Successful login using valid credentials
  And click on Submit
  Then success message should be "Logged In Successfully"
  And Logout
- And close the browser
+
  
 
 @regression
@@ -25,7 +25,7 @@ Scenario Outline: Successful login using valid credentials
  And click on Submit
  Then success message should be "Logged In Successfully"
  And Logout
- And close the browser
+
  
 Examples: 
 |user||password|
