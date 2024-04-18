@@ -13,7 +13,7 @@ import io.cucumber.junit.CucumberOptions;
    dryRun=false,
    monochrome= true,
    tags="@regression",
-   plugin= {"pretty","html:target/abcd.html"})
+   plugin= {"pretty","io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"})
 public class Runner {
 
 }
