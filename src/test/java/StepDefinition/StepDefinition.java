@@ -3,6 +3,7 @@ import StepDefinition.BaseClass;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Calendar;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -12,11 +13,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import Pageobject.Loginpg;
 import io.cucumber.java.After;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.java.it.Date;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class StepDefinition extends BaseClass
@@ -79,11 +82,13 @@ public class StepDefinition extends BaseClass
 
 
 	
-	@After("@regression")
+	@AfterStep()
 	   public void Screenshotforfailed(Scenario scenerio) throws IOException
-	   {
+	   {  Calendar cal=Calendar.getInstance();
+	      java.util.Date time=cal.getTime();
+	      String timeStamp=time.toString().replace(":", "").replace(" ", "");
 		  if(scenerio.isFailed()==true) {
-			  String filepath="./Cucumberbdd/Screenshotfolder/testing.png";
+			  String filepath="./Cucumberbdd/Screenshotfolder/testing"+timeStamp+".png";
 			  File desti=new File(filepath);
 			  TakesScreenshot ts=(TakesScreenshot) driver;
 			  File src=ts.getScreenshotAs(OutputType.FILE);
