@@ -79,9 +79,6 @@ public class StepDefinition extends BaseClass
 		loginpage.logOut();
 	   
 	}
-
-
-	
 	@AfterStep()
 	   public void Screenshotforfailed(Scenario scenerio) throws IOException
 	   {  Calendar cal=Calendar.getInstance();
